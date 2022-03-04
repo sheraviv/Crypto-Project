@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>crpto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+
+    <div class="navMenu ">
+       
+        <nav class="navbar navbar-default mb-5 cust-bottom">
+            <div class="container-fluid bar row">
+                <div class="row col-9 col-md-8 mr-0">
+                    <button class="btn p-0 p-md-1 ml-2 cust col-3 col-md-2" id="home">Home</button>
+                    <button class="btn   p-0 p-md-1 ml-2 cust  col-4 col-md-3" id="reportsBtn">Reports</button>
+                    <button class="btn   p-0 p-md-1 ml-2 cust  col-3 col-md-2" id="aboutBtn">About</button>
+                </div>
+                <div class="row col-4 col-md-4 pl-0 pl-md-5 ">
+                    <input type="text" class="form-control col-5 col-md-6 p-0 p-md-1" id="searchInput" >
+                    <button id="searchBtn" class="btn col-7 col-md-2 p-0 p-md-1 cust">Search</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    
+    <div class="col-7 m-2  d-none " id="chosenDiv">
+        <button class="  btn-sm btn btn-danger delete-coin">Replace</button>
+        <span class="cryptoSymb "></span>
+    </div>
+
+
+    <div id="cryptoForm" class="card m-4" style="width: 18rem; display: none">
+        <div class="card-body">
+            <h5 class="card-title">symbol</h5>
+            <p class="card-text">name</p>
+            <button class="btn btn-primary more-info">Show Rate</button>
+            <div class="toggle-btn">
+                <input class="toggle-one" type="checkbox">
+            </div>
+            <div class="rateCard row">
+                <img class="col-3 p-0 mb-5 " src="" alt="">
+                <ul class=" pl-2">
+                    <li id="usd"></li>
+                    <li id="eur"></li>
+                    <li id="ils"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+
+        <div id="homeMain">
+            <div id="content" class="content"></div>
+           
+            <div class="pagination justify-content-center listChanger">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item" id="backButton">
+                            <button class="page-link " id="backBtn">Back</button>
+                        </li>
+                        <li class="page-item disabled">
+                            <button class="page-link" id="listNumber">1</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link" id="nextBtn">Next</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="aboutDiv" class="container-fluid aboutDiv">
+            <div class="row">
+                <img src="https://www.mfa.gov.il/MFA/AboutIsrael/State/Personalities/Photos/gpo-ao-netanyahu-head.jpg" alt="" class="col-10 col-md-2 ml-4">
+                <div class="col-12 col-md-8 about">
+                   <p>Hi my name is Aviv.
+                       And I did this project.
+                   </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="reports" class="mt-5 reports">
+            <div class=" row">
+                <div class="col-12 col-md-2 justify-content-around m-3">
+                    <div class="coinInGraph"></div>
+                    <div class="coinInGraph"></div>
+                    <div class="coinInGraph"></div>
+                    <div class="coinInGraph"></div>
+                    <div class="coinInGraph"></div>
+                </div>
+                <div class="col-12 col-md-7 m-3">
+                    <canvas></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="chooseCard">
+        <div class="continer m-3">
+            <h5>Choose only 5 crypto coins! </h5>
+            <div class="row mt-md-1" id="coins-list">
+            </div>
+            <button class="btn btn-info cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+   <script src="./config.js"></script>
+   <script src="./graphs.js"></script>
+   <script src="./index.js"></script>
+   <script src="./index2.js"></script>
+
+</body>
+
+
+</html>
